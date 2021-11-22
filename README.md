@@ -103,12 +103,14 @@ a2.update_rating()
 
 
 a = Author.objects.order_by('-ratingAuthor')[:1]
+
 for i in a:
   i.ratingAuthor
   i.authorUser.username
 
 
 p = Post.objects.order_by('-rating')[:1]
+
 for i in p:
   i.dateCreation
   i.author.authorUser
